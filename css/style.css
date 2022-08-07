@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    border: none;
+    color: rgb(33, 33, 37);
+}
+
+input, label{
+    display: block;
+    width: 100%;
+}
+input:focus, label:focus{
+    outline: none;
+}
+body{
+    padding-top: 5vh;
+    padding-left: 5vh;
+    background-color: rgb(98, 224, 214);
+}
+h1{
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 50px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+}
+#main-container{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+}
+#main-container h2{
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.full-box{
+    flex: 1 1 100%;
+    position: relative;
+}
+.half-box{
+    flex: 1 1 45%;
+    position: relative;
+}
+.spacing{
+    margin-right: 2.5%;
+}
+label{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+input{
+    border-bottom: 2px solid black;
+    padding:  10px;
+    margin-bottom: 40px;
+    background-color: rgba(169, 169, 169, 0.26);
+}
+input#btn-submit{
+    border: none;
+}
+input:focus{
+    border-color: rgb(76, 0, 218);
+}
+input[type="submit"]{
+    background-color: rgb(162, 0, 255);
+    height: 40px;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 25px;
+}
+#agreement{
+    margin-right: 5px;
+}
+#agreement, #agreement-label{
+    display: inline-block;
+    width: auto;
+}
+.class-error{
+    color:red;
+    position: absolute;
+    top: 57px;
+    font-size: 1em;
+}
+.template{
+    display: none;
+}
