@@ -9,11 +9,21 @@ class Validator{
 
     //validação incialk de todos os campos
     validate(form){
-        //pegar os inputs
+
+        
+
+        //pegar os inputs-no caso isso é um HTML Collection
         let inputs = form.getElementsByTagName('input')
+
+        console.log(`ola`, inputs[0])
+        
 
         //Transformar um HTML Collection em um Array
         let inputsArray = [...inputs]
+
+        console.log(`ola2`, inputsArray[0])
+
+        console.log(`ae`,inputsArray[0].textContent)
 
         //loop de inputs e validação para cada um deles
         inputsArray.forEach(function(input){
