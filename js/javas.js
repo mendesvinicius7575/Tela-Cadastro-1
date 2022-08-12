@@ -14,10 +14,17 @@ class Validator{
     }
 
 
-    //validação incialk de todos os campos
+    //validação incial de todos os campos
     validate(form){
 
         
+        //resgata validações
+        let currentValidations = document.querySelectorAll('form .class-error')
+
+        if(currentValidations.length > 0){
+            this.cleanValidations(currentValidations);
+        }
+
 
         //pegar os inputs-no caso isso é um HTML Collection
         let inputs = form.getElementsByTagName('input')
@@ -33,6 +40,8 @@ class Validator{
             for(let i =0; this.validations.length > i; i++){
                 //verifica se a validação atual existe no input
                 if(input.getAttribute(this.validations[i]) != null){
+
+                    console.log(input.getAttribute(this.validations[i]))
                     //limpa a string para virar um metodo
                     let method = this.validations[i].replace('data-','').replace('-','');
                     //valor input
@@ -72,6 +81,13 @@ class Validator{
 
 
     }
+
+    //limpar validações da tela
+    cleanValidations(validations){
+        validations.forEach(el => el.remove())
+    }
+
+
 }
 
 
