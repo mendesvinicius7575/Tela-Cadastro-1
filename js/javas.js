@@ -10,6 +10,7 @@ class Validator{
     constructor(){
         this.validations = [
             'data-min-length',
+            'data-max-length',
         ]
     }
 
@@ -67,8 +68,19 @@ class Validator{
 
     }
 
+    maxlength(input, maxValor){
+        let inputLength = input.value.length;
+
+        let errorMessage = `O Campo precisa ser menor que ${maxValor}`
+
+        if(inputLength > maxValor){
+            this.mostrarMensagem(input, errorMessage)
+        }
+    }
+
     //metodo para imprimir a mensagemd e erro
     mostrarMensagem(input, msg){
+        
         let template = document.querySelector('.class-error').cloneNode(true);
 
         template.textContent = msg;
